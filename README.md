@@ -19,7 +19,7 @@ Clone the repository and generate the build using the following:
 To run the application:
 
 ```bash
-  ./hello-world-gtk
+  ./build/AI_Chat
 ```
 
 ## Authors
