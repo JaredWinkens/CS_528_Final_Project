@@ -12,11 +12,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK4 REQUIRED IMPORTED_TARGET gtk4)
 
-# Build binary
-add_executable(
-  AI_Chat
-  hello-world-gtk.c
-)
-
-# Link necessary libraries
-target_link_libraries(AI_Chat PRIVATE PkgConfig::GTK4)
+# Add subdirectories
+add_subdirectory(common)
+add_subdirectory(client)
+add_subdirectory(server)
