@@ -5,23 +5,37 @@ A server-client application that allows multiple remote users to connect and con
 
 
 
-## Installation
+## Build
 
-Clone the repository and generate the build using the following:
+Clone the repository:
 
 ```bash
   git clone git@github.com:JaredWinkens/CS_528_Final_Project.git
   cd CS_528_Final_Project
-  cmake -S . -B build
-  cmake --build build
 ```
-
-To run the application:
+Generate the cmake files:
 
 ```bash
-  ./build/AI_Chat
+cmake --preset default
 ```
 
+Build the project:
+
+```bash
+cmake --build --preset default
+```
+
+Resulting applications:
+
+```bash
+root/
+├─ build/
+│  ├─ Debug/
+│  │  ├─ client/
+│  │  │  ├─ Chat_Client
+│  │  ├─ server/
+│  │  │  ├─ Chat_Server
+```    
 ## Authors
 
 - [Micheal Ballard](mailto:ballarmj@sunypoly.edu)
