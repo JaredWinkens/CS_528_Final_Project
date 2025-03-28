@@ -30,11 +30,10 @@ Resulting applications:
 ```bash
 root/
 ├─ build/
-│  ├─ Debug/
-│  │  ├─ client/
-│  │  │  ├─ Chat_Client
-│  │  ├─ server/
-│  │  │  ├─ Chat_Server
+│  ├─ client/
+│  │  ├─ Chat_Client
+│  ├─ server/
+│  │  ├─ Chat_Server
 ```    
 ## Authors
 
