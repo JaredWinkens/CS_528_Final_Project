@@ -3,8 +3,17 @@
   "configurePresets": [
     {
       "name": "default",
-      "description": "Configure the Chat Client",
-      "binaryDir": "${sourceDir}/build/debug",
+      "description": "Generate the applications with GNU Make",
+      "binaryDir": "${sourceDir}/build/",
+      "generator": "Unix Makefiles",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "ninja",
+      "description": "Generate the applications with Ninja",
+      "binaryDir": "${sourceDir}/build/",
       "generator": "Ninja",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug"
@@ -14,7 +23,17 @@
   "buildPresets": [
     {
       "name": "default",
-      "description": "Build the Chat Client",
+      "description": "Build the applications with GNU Make",
+      "configurePreset": "default",
+      "targets": [
+        "Chat_Client",
+        "Chat_Server"
+      ],
+      "verbose": true
+    },
+    {
+      "name": "ninja",
+      "description": "Build the applications with Ninja",
       "configurePreset": "default",
       "targets": [
         "Chat_Client",
